@@ -9,7 +9,7 @@ import com.example.viewbinding.databinding.Frgmt1Binding
 
 class Frgmt1 : Fragment{
 
-    var binding : Frgmt1Binding?    = null
+    lateinit var binding : Frgmt1Binding
 
     constructor():super()
 
@@ -20,12 +20,11 @@ class Frgmt1 : Fragment{
         savedInstanceState: Bundle?
     ): View? {
         binding = Frgmt1Binding.inflate(inflater,container,false)
-        return binding?.root
+        return binding.root
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        binding = null
     }
     
 }
